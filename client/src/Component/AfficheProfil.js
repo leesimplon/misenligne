@@ -11,7 +11,7 @@ export default class AfficheProfil extends Component {
 
   }
   componentDidMount() {
-    axios.get('http://localhost:8080' + this.props.location.pathname)
+    axios.get('https://misenligne.herokuapp.com' + this.props.location.pathname)
       .then(response => {
         console.log('i am a response', response)
         this.setState({ id: response.data._id });
@@ -48,7 +48,7 @@ export default class AfficheProfil extends Component {
                   <td>{this.state.nam}</td>
                   <td>{this.state.mail}</td>
                   <td>{this.state.mdp}</td>
-                  <td><img  alt="pdp" width="50px" height="50px" src={'http://localhost:8080/user/'+this.state.photo}/></td>
+                  <td><img  alt="pdp" width="50px" height="50px" src={'https://misenligne.herokuapp.com/user/'+this.state.photo}/></td>
                 </tr>
               </tbody>
             </table>

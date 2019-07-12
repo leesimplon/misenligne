@@ -11,7 +11,7 @@ export default class ListTous extends Component {
 
     }
     componentDidMount() {
-        axios.get('http://localhost:8080/profil')
+        axios.get('https://misenligne.herokuapp.com/profil')
             .then(response => {
                 console.log('i am a response', response)
                 this.setState({ profil: response.data });
@@ -45,7 +45,7 @@ export default class ListTous extends Component {
                                     <td>{obj.nom}</td>
                                     <td>{obj.email}</td>
                                     <td>{obj.password}</td>
-                                    <td><img width="150px" height="50px" src={'http://localhost:8080/user/'+obj.photo_profil} alt="pdp" />
+                                    <td><img width="150px" height="50px" src={'https://misenligne.herokuapp.com/user/'+obj.photo_profil} alt="pdp" />
                                     </td>
                                     {console.log(obj)}
                                 </tr>
