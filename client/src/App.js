@@ -10,8 +10,8 @@ import AfficheProfil from './Component/AfficheProfil'
       <Router>
       <div className="container">
         <Route path="/" exact component={PostFrontToBack} />
-        <Route path="/profil" exact component={ListTous} />
-        <Route path="/profil/:profilId" exact component={AfficheProfil} />
+        <Route path="/personne" exact component={ListTous} />
+        <Route path="/personne/:personneId" exact component={AfficheProfil} />
       </div>
     </Router>     
     )
